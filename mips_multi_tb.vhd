@@ -59,7 +59,7 @@ BEGIN
 	debug => debug,
 	rst => rst
 	);
-	
+--	
 init : PROCESS                                               
 -- variable declarations                                     
 BEGIN                                                        
