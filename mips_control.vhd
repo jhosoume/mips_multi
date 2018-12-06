@@ -14,7 +14,7 @@ ENTITY mips_control IS
 		is_beq	: OUT std_logic; 
 		is_bne	: OUT std_logic;
 		s_datareg: OUT std_logic;
-		op_alu	: OUT std_logic_vector (1 DOWNTO 0);
+		op_alu	: OUT std_logic_vector (2 DOWNTO 0);
 		s_mem_add: OUT std_logic;
 		s_PCin	: OUT std_logic_vector (1 DOWNTO 0);
 		s_aluAin : OUT std_logic;
@@ -60,7 +60,7 @@ logic: process (opcode, pstate)
 		wr_breg		<= '0';
 		is_beq 		<= '0';
 		is_bne 		<= '0';
-		op_alu		<= "00";
+		op_alu		<= "000";
 		s_datareg 	<= '0';
 		s_mem_add 	<= '0';
 		s_PCin		<= "00";
@@ -86,13 +86,13 @@ logic: process (opcode, pstate)
 										s_mem_add <= '1';
 									
 			when rtype_ex_st	=> s_aluAin <= '1';
-										op_alu <= "10";
+										op_alu <= "010";
 									
 			when writereg_st 	=> s_reg_add <= '1';
 										wr_breg <= '1';
 								  
 			when branch_ex_st => s_aluAin <= '1';
-										op_alu <= "01";
+										op_alu <= "001";
 										s_PCin <= "01";
 										if opcode = iBEQ 
 										then is_beq <= '1';
@@ -114,7 +114,7 @@ new_state: process (opcode, pstate)
 			when fetch_st => 	nstate <= decode_st;
 			when decode_st =>	case opcode is
 									when iRTYPE => nstate <= rtype_ex_st;
-									when iLW | iSW | iADDI => nstate <= c_mem_add_st;
+									when iLW | iSW | iADDI | iORI | iANDI => nstate <= c_mem_add_st;
 									when iBEQ | iBNE => nstate <= branch_ex_st;
 									when iJ => nstate <= jump_ex_st;
 									when others => null;
@@ -122,7 +122,7 @@ new_state: process (opcode, pstate)
 			when c_mem_add_st => case opcode is 
 									when iLW => nstate <= readmem_st;
 									when iSW => nstate <= writemem_st;
-									when iADDI => nstate <= arith_imm_st;
+									when iADDI | iORI | iANDI => nstate <= arith_imm_st;
 									when others => null;
 								 end case;
 			when readmem_st 	=> nstate <= ldreg_st;

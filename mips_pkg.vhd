@@ -190,7 +190,7 @@ package mips_pkg is
 	
 	component alu_ctr is
 	port (
-		op_alu		: in std_logic_vector(1 downto 0);
+		op_alu		: in std_logic_vector(2 downto 0);
 		funct			: in std_logic_vector(5 downto 0);
 		alu_ctr	   : out std_logic_vector(3 downto 0)
 	);
@@ -208,7 +208,7 @@ package mips_pkg is
 		is_beq	: OUT std_logic;
 		is_bne	: OUT std_logic;
 		s_datareg: OUT std_logic;
-		op_alu	: OUT std_logic_vector (1 DOWNTO 0);
+		op_alu	: OUT std_logic_vector (2 DOWNTO 0);
 		s_mem_add: OUT std_logic;
 		s_PCin	: OUT std_logic_vector (1 DOWNTO 0);
 		s_aluAin : OUT std_logic;
@@ -257,6 +257,7 @@ component mips_mem is
 		WADDR : natural := IMEM_ADDR);
 	port (
 		address	: IN STD_LOGIC_VECTOR (WADDR-1 DOWNTO 0);
+		byteena	: IN STD_LOGIC_VECTOR (3 DOWNTO 0) :=  (OTHERS => '1');
 		clk		: IN STD_LOGIC;
 		data		: IN STD_LOGIC_VECTOR (WIDTH-1 DOWNTO 0);
 		wren		: IN STD_LOGIC ;

@@ -15,6 +15,7 @@ entity mips_mem is
 		WADDR : natural := 8);
 	port (
 		address	: IN STD_LOGIC_VECTOR (WADDR-1 DOWNTO 0);
+		byteena	: IN STD_LOGIC_VECTOR (3 DOWNTO 0) :=  (OTHERS => '1');
 		clk		: IN STD_LOGIC;
 		data		: IN STD_LOGIC_VECTOR (WIDTH-1 DOWNTO 0);
 		wren		: IN STD_LOGIC ;
@@ -51,6 +52,7 @@ architecture rtl of mips_mem is
 	);
 	PORT (
 			address_a	: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+			byteena_a	: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
 			clock0		: IN STD_LOGIC ;
 			data_a		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 			wren_a		: IN STD_LOGIC ;
@@ -80,10 +82,11 @@ architecture rtl of mips_mem is
 		power_up_uninitialized => "FALSE",
 		widthad_a => 8,
 		width_a => 32,
-		width_byteena_a => 1
+		width_byteena_a => 4
 	)
 	PORT MAP (
 		address_a => address,
+		byteena_a => byteena,
 		clock0 => clk, --clk64,
 		data_a => data,
 		wren_a => wren,

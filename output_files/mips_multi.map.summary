@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Dec  5 23:29:03 2018
+Analysis & Synthesis Status : Successful - Thu Dec  6 03:04:43 2018
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : mips_multi
 Top-level Entity Name : mips_multi
 Family : Cyclone II
-Total logic elements : 1,178
-    Total combinational functions : 1,112
+Total logic elements : 1,173
+    Total combinational functions : 1,107
     Dedicated logic registers : 241
 Total registers : 241
 Total pins : 37

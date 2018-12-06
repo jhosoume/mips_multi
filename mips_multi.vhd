@@ -38,6 +38,7 @@ signal
 			rULA_out_v,		-- registrador na saida da ula
 			memadd_v,		-- endereco da memoria
 			datadd_v,		-- endereco de dado na memoria
+			intadd_v,		-- endereco de instrucao na memoria
 			regAin_v,		-- saida A do BREG
 			regBin_v,		-- saida B do BREG
 			regA_v,			-- saida A do BREG
@@ -55,7 +56,7 @@ signal rset_s, clock_s 	: std_logic;
 signal iwreg_v 			: std_logic_vector(4 downto 0);  -- indice registador escrito
 signal alu_sel_v			: std_logic_vector(3 downto 0);  -- indice registador escrito
 signal sel_aluB_v 		: std_logic_vector(1 downto 0);	-- seleciona entrada B da ula
-signal alu_op_v			: std_logic_vector(1 downto 0);	-- codigo op ula
+signal alu_op_v			: std_logic_vector(2 downto 0);	-- codigo op ula
 signal org_pc_v			: std_logic_vector(1 downto 0);	-- selecao entrada do PC
 
 signal 	
@@ -100,7 +101,9 @@ pc_wr_s 		<= jump_s or (zero_s and is_beq_s) or ((not zero_s) and is_bne_s);
 
 imm32_x4_v 	<= imm32_v(29 downto 0) & "00";
 
-datadd_v		<= X"000000" & '1' & alu_out_v(8 downto 2);
+datadd_v		<= X"000000" & '1' & rULA_out_v(8 downto 2);
+
+intadd_v		<= X"000000" & pcout_v(9 downto 2); 
 
 
 --=======================================================================
@@ -115,7 +118,7 @@ pc:	reg
 --=======================================================================		
 mux_mem: mux_2
 		port map (
-			in0 	=> pcout_v,
+			in0 	=> intadd_v,
 			in1 	=> datadd_v,
 			sel 	=> sel_end_mem_s,
 			m_out => memadd_v
@@ -125,7 +128,7 @@ mux_mem: mux_2
 -- Memoria do MIPS
 --=======================================================================		
 mem:  mips_mem
-		port map (address => memadd_v(9 downto 2), data => regB_v, wren => mem_wr_s, clk => clk_rom, Q => memout_v );
+		port map (address => memadd_v(7 downto 0), data => regB_v, wren => mem_wr_s, clk => clk_rom, Q => memout_v );
 	
 --=======================================================================
 -- RI - registrador de instruções

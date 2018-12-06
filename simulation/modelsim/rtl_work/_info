@@ -4,9 +4,9 @@ K3
 cModel Technology
 Z0 d/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/simulation/modelsim
 Ealu_ctr
-Z1 w1448989684
+Z1 w1544061113
 Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-Z3 DPx4 work 8 mips_pkg 0 22 XzF7mB9aJFSJFYdKTgB]Y2
+Z3 DPx4 work 8 mips_pkg 0 22 I3ZWad`gmg]?0?SfO[Pk21
 Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z6 d/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/simulation/modelsim
@@ -14,25 +14,25 @@ Z7 8/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/alu_ctr.vhd
 Z8 F/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/alu_ctr.vhd
 l0
 L8
-VYCB6mXA:>[Md82iQ_QYS02
+VfkzA9aGJkEh<EjROInP9;0
 Z9 OV;C;10.1d;51
 31
-Z10 !s108 1544056493.438232
+Z10 !s108 1544072723.570270
 Z11 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/alu_ctr.vhd|
 Z12 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/alu_ctr.vhd|
 Z13 o-93 -work work -O0
 Z14 tExplicit 1
-!s100 [U`nCZFON0feeBlo7i[NK0
+!s100 eClcQG8H38D87W3`heILV0
 !i10b 1
 Abehav
 R2
 R3
 R4
 R5
-DEx4 work 7 alu_ctr 0 22 YCB6mXA:>[Md82iQ_QYS02
+DEx4 work 7 alu_ctr 0 22 fkzA9aGJkEh<EjROInP9;0
 l19
 L17
-Vd<@KG@X3M_QQ46H9^dgzk3
+V`?iQFH;WARKdIVAzkQ]n10
 R9
 31
 R10
@@ -40,7 +40,7 @@ R11
 R12
 R13
 R14
-!s100 2AYJ=@UIh1FdF7MKEDi270
+!s100 ?MLWDZHBYk`7dHKOERHG52
 !i10b 1
 Ebreg
 Z15 w1390850488
@@ -58,7 +58,7 @@ L10
 V@8`bB?R9g4L5C@Ug6HJ?73
 R9
 31
-Z20 !s108 1544056493.346318
+Z20 !s108 1544072723.474486
 Z21 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/breg.vhd|
 Z22 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/breg.vhd|
 R13
@@ -99,7 +99,7 @@ L6
 V1_30]<W[89M5bF?h[]^<30
 R9
 31
-Z26 !s108 1544056493.378989
+Z26 !s108 1544072723.508680
 Z27 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/extsgn.vhd|
 Z28 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/extsgn.vhd|
 R13
@@ -125,7 +125,7 @@ R14
 !s100 ]GZ8`Y=Tn=j7nBNC;c5_j0
 !i10b 1
 Emips_control
-Z29 w1543495334
+Z29 w1544061700
 R2
 R3
 R4
@@ -135,25 +135,25 @@ Z30 8/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_control.vhd
 Z31 F/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_control.vhd
 l0
 L5
-VEUfU>9]WHj6WG>2Ie^HY:3
+VHihLV^bGjI?0OfNm_0_>l0
 R9
 31
-Z32 !s108 1544056493.526358
+Z32 !s108 1544072723.661693
 Z33 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_control.vhd|
 Z34 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_control.vhd|
 R13
 R14
-!s100 GaQ[7:CTi:2MDK7O3li4o0
+!s100 =B@j`dCd3bMPznX0Dk=mH0
 !i10b 1
 Acontrol_op
 R2
 R3
 R4
 R5
-DEx4 work 12 mips_control 0 22 EUfU>9]WHj6WG>2Ie^HY:3
+DEx4 work 12 mips_control 0 22 HihLV^bGjI?0OfNm_0_>l0
 l44
 L28
-V_[>MhEX?`493_cb3T00==3
+V:TMC99^3cSfzASR3<c4oK0
 R9
 31
 R32
@@ -161,10 +161,10 @@ R33
 R34
 R13
 R14
-!s100 A5Aj]R>93b?FX647XV0_=1
+!s100 @jDNio7XlQ<nJ84_:A?0H3
 !i10b 1
 Emips_mem
-Z35 w1543493670
+Z35 w1544064655
 Z36 DPx9 altera_mf 20 altera_mf_components 0 22 zh;bE09gCIPDVLK?MN49L3
 R3
 R2
@@ -175,15 +175,15 @@ Z37 8/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_mem.vhd
 Z38 F/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_mem.vhd
 l0
 L12
-VO@SdERni9?Y^U]HOf7dC:1
+VaiNK6L?3nnnC8gf0bKgQ90
 R9
 31
-Z39 !s108 1544056493.304165
+Z39 !s108 1544072723.429460
 Z40 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_mem.vhd|
 Z41 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_mem.vhd|
 R13
 R14
-!s100 07?NJ;z_:YCIC@5R`i1mQ1
+!s100 P;LQ0PkkzX1f2BXa@Kaln1
 !i10b 1
 Artl
 R36
@@ -191,10 +191,10 @@ R3
 R2
 R4
 R5
-DEx4 work 8 mips_mem 0 22 O@SdERni9?Y^U]HOf7dC:1
-l64
-L24
-VWQE>nnLAJMT>EnaEBn>OK1
+DEx4 work 8 mips_mem 0 22 aiNK6L?3nnnC8gf0bKgQ90
+l66
+L25
+V4c5H=2JLHC;PMRH=moX`40
 R9
 31
 R39
@@ -202,10 +202,10 @@ R40
 R41
 R13
 R14
-!s100 eUmh48WmQK;12HFl6>`lH0
+!s100 n9PfkcVgRT6zVoZiU4k3M1
 !i10b 1
 Emips_multi
-Z42 w1543456384
+Z42 w1544072658
 R2
 R3
 R4
@@ -218,7 +218,7 @@ L8
 Vc5e]jH`emI3iKd>ZMXh192
 R9
 31
-Z45 !s108 1544056493.241387
+Z45 !s108 1544072723.364510
 Z46 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_multi.vhd|
 Z47 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_multi.vhd|
 R13
@@ -231,9 +231,9 @@ R3
 R4
 R5
 DEx4 work 10 mips_multi 0 22 c5e]jH`emI3iKd>ZMXh192
-l90
+l91
 L19
-V@`m3bj=OC9l4KkUm][mT[0
+VMX@Ud3U?Icf?>7U`PY`Lf3
 R9
 31
 R45
@@ -241,7 +241,7 @@ R46
 R47
 R13
 R14
-!s100 df1G4j]=G60:Do<FDVJQm3
+!s100 mPS54T=8OgD3B`1dc3A>E2
 !i10b 1
 Emips_multi_tb
 Z48 w1544046769
@@ -257,7 +257,7 @@ Vh<D<TKJ[Y=5kZ32Wk;baL3
 R9
 31
 !i10b 1
-Z51 !s108 1544056493.555519
+Z51 !s108 1544072723.691595
 Z52 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_multi_tb.vhd|
 Z53 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_multi_tb.vhd|
 R13
@@ -282,21 +282,21 @@ Pmips_pkg
 R2
 R4
 R5
-Z54 w1447767630
+Z54 w1544064936
 R6
 Z55 8/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_pkg.vhd
 Z56 F/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_pkg.vhd
 l0
 L6
-VXzF7mB9aJFSJFYdKTgB]Y2
+VI3ZWad`gmg]?0?SfO[Pk21
 R9
 31
-Z57 !s108 1544056493.103277
+Z57 !s108 1544072723.290801
 Z58 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_pkg.vhd|
 Z59 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_pkg.vhd|
 R13
 R14
-!s100 Uo0dZgLdjG3LlV=e5kK9H0
+!s100 aM6gMal0dKhjMIlY7Y5LD0
 !i10b 1
 Bbody
 R3
@@ -304,7 +304,7 @@ R2
 R4
 R5
 l0
-L276
+L286
 VjHjkP2zVYhJ7i:?`Bf?Q80
 R9
 31
@@ -314,10 +314,10 @@ R59
 R13
 R14
 nbody
-!s100 YNAhe`>inG_LnQLYXi_Q=0
+!s100 Cob<BKLNaSeeVU`S<D7nG3
 !i10b 1
 Emux_2
-Z60 w1390850328
+Z60 w1544071763
 R2
 R3
 R16
@@ -332,7 +332,7 @@ L6
 Vg0Io]c`bdUN4[=;LL9M6=2
 R9
 31
-Z64 !s108 1544056493.271258
+Z64 !s108 1544072723.395441
 Z65 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mux_2.vhd|
 Z66 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mux_2.vhd|
 R13
@@ -375,7 +375,7 @@ L6
 VNA_IWTgOn=MT0>d7<2TSR0
 R9
 31
-Z70 !s108 1544056493.494557
+Z70 !s108 1544072723.628869
 Z71 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mux_3.vhd|
 Z72 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mux_3.vhd|
 R13
@@ -418,7 +418,7 @@ L6
 VU^TFaTngo2GPVVYQJhzT12
 R9
 31
-Z76 !s108 1544056493.406733
+Z76 !s108 1544072723.537274
 Z77 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mux_4.vhd|
 Z78 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mux_4.vhd|
 R13
@@ -457,7 +457,7 @@ L7
 V=M[ABcRJOEGR;Bk2YdQ=C3
 R9
 31
-Z82 !s108 1544056493.173709
+Z82 !s108 1544072723.322032
 Z83 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/reg.vhd|
 Z84 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/reg.vhd|
 R13
@@ -492,7 +492,7 @@ L7
 V<YlF2G;hj=P5B33heZJQR3
 R9
 31
-Z88 !s108 1544056493.220061
+Z88 !s108 1544072723.343596
 Z89 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/regbuf.vhd|
 Z90 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/regbuf.vhd|
 R13
@@ -529,7 +529,7 @@ L6
 VzoaDkdk7>JLIQh>98S8oV1
 R9
 31
-Z94 !s108 1544056493.465882
+Z94 !s108 1544072723.599234
 Z95 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/ulamips.vhd|
 Z96 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/ulamips.vhd|
 R13
