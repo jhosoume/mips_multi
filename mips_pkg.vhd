@@ -192,6 +192,7 @@ package mips_pkg is
 	port (
 		op_alu		: in std_logic_vector(2 downto 0);
 		funct			: in std_logic_vector(5 downto 0);
+		s_shamt		: out std_logic;
 		alu_ctr	   : out std_logic_vector(3 downto 0)
 	);
 	end component;
@@ -212,7 +213,8 @@ package mips_pkg is
 		s_mem_add: OUT std_logic;
 		s_PCin	: OUT std_logic_vector (1 DOWNTO 0);
 		s_aluAin : OUT std_logic;
-		s_aluBin : OUT std_logic_vector (1 DOWNTO 0); 
+		s_aluBin : OUT std_logic_vector (1 DOWNTO 0);
+--		s_shamt	: OUT std_logic;
 		wr_breg	: OUT std_logic;
 		s_reg_add: OUT std_logic
 	);

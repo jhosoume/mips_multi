@@ -18,7 +18,8 @@ ENTITY mips_control IS
 		s_mem_add: OUT std_logic;
 		s_PCin	: OUT std_logic_vector (1 DOWNTO 0);
 		s_aluAin : OUT std_logic;
-		s_aluBin : OUT std_logic_vector (1 DOWNTO 0); 
+		s_aluBin : OUT std_logic_vector (1 DOWNTO 0);
+--		s_shamt	: OUT std_logic;
 		wr_breg	: OUT std_logic;
 		s_reg_add: OUT std_logic
 	);
@@ -67,6 +68,7 @@ logic: process (opcode, pstate)
 		s_aluAin 	<= '0';
 		s_aluBin  	<= "00";
 		s_reg_add 	<= '0';
+--		s_shamt		<= '0';
 		case pstate is 
 			when fetch_st 		=> wr_pc 	<= '1';
 										s_aluBin <= "01";
@@ -87,6 +89,10 @@ logic: process (opcode, pstate)
 									
 			when rtype_ex_st	=> s_aluAin <= '1';
 										op_alu <= "010";
+										
+	--		when shamt_ex_st	=> s_aluAin <= '1';
+	--									op_alu <= "010";
+	--									s_shamt <= '1';
 									
 			when writereg_st 	=> s_reg_add <= '1';
 										wr_breg <= '1';

@@ -10,6 +10,7 @@ entity alu_ctr is
 	(
 		op_alu		: in std_logic_vector(2 downto 0);
 		funct			: in std_logic_vector(5 downto 0);
+		s_shamt		: out std_logic;
 		alu_ctr	   : out std_logic_vector(3 downto 0)
 	);
 end entity;
@@ -17,6 +18,11 @@ end entity;
 architecture behav of alu_ctr is
 
 begin
+
+s_shamt <= '1' when (op_alu = "010" and funct=iSLL) else
+			  '1' when (op_alu = "010" and funct=iSRA) else
+			  '1' when (op_alu = "010" and funct=iSRL) else
+			  '0';
 
 alu_ctr <= 	ULA_AND when (op_alu="010" and funct=iAND) else
 			ULA_AND when (op_alu="100") else

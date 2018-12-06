@@ -36,8 +36,10 @@ add wave -noupdate -color Blue -label ALUControl/op_alu -radix binary /mips_mult
 add wave -noupdate -color Blue -label ALUControl/Funct -radix binary /mips_multi_tb/i1/actr/funct
 add wave -noupdate -color Blue -label ALUControl/Alu_Ctr -radix octal /mips_multi_tb/i1/actr/alu_ctr
 add wave -noupdate -color Blue -label ALU/AluControl -radix binary /mips_multi_tb/i1/alu/aluctl
+add wave -noupdate -label OPCODE -radixenum symbolic /mips_multi_tb/i1/ctr_mips/opcode
+add wave -noupdate -color Blue -label sel_shamt -radix binary /mips_multi_tb/i1/mux_shamt/sel
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {183 ps} 0}
+WaveRestoreCursors {{Cursor 1} {229 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 230
 configure wave -valuecolwidth 100

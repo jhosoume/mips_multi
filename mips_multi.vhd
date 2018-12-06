@@ -45,10 +45,12 @@ signal
 			regB_v,			-- saida B do BREG
 			aluA_v,			-- entrada A da ULA
 			aluB_v,			-- entrada B da ULA
+			Bmux_v,			-- saida entre os mux de selecao da entrada B da ULA
 			alu_out_v,		-- saida ULA
 			instruction_v,	-- saida do reg de instrucoes
 			imm32_x4_v,	   -- imediato extendido e multiplicado por 4
-			imm32_v			-- imediato extendido a 32 bits
+			imm32_v,			-- imediato extendido a 32 bits
+			shamt_32b_v		-- gera sinal de 32 bits pra shamt
 			: std_logic_vector(WORD_SIZE-1 downto 0);
 			
 signal addsht2_v 			: std_logic_vector(WORD_SIZE-1 downto 0);
@@ -74,6 +76,7 @@ signal
 			reg_wr_s,		-- escreve breg
 			sel_end_mem_s,	-- seleciona endereco memoria
 			sel_aluA_s,		-- seleciona entrada A da ula
+			sel_shamt_s,	-- seleciona se sera utilizado o campo shamt na entrada B da ula
 			zero_s			-- sinal zero da ula
 			: std_logic;
 			
@@ -104,6 +107,8 @@ imm32_x4_v 	<= imm32_v(29 downto 0) & "00";
 datadd_v		<= X"000000" & '1' & rULA_out_v(8 downto 2);
 
 intadd_v		<= X"000000" & pcout_v(9 downto 2); 
+
+shamt_32b_v <= X"000000" & '0' & '0' & '0' & sht_field_v;
 
 
 --=======================================================================
@@ -222,8 +227,20 @@ mux_ulaB: mux_4
 			in2	=> imm32_v,
 			in3	=> imm32_x4_v,
 			sel 	=> sel_aluB_v,
+			m_out => Bmux_v
+		);
+		
+--=======================================================================
+-- Mux para selecao da entrada de baixo da ULA (Shamt ou Saida do mux_ulaB)
+--=======================================================================				
+mux_shamt: mux_2
+		port map (
+			in0 	=> Bmux_v, 
+			in1 	=> shamt_32b_v,
+			sel 	=> sel_shamt_s,
 			m_out => aluB_v
 		);	
+	
 
 --=======================================================================
 -- Modulo de controle da ULA
@@ -232,6 +249,7 @@ actr: alu_ctr
 			port map (
 				op_alu 	=> alu_op_v,
 				funct	 	=> func_field_v,
+				s_shamt	=> sel_shamt_s,
 				alu_ctr	=> alu_sel_v
 			);
 
@@ -286,6 +304,7 @@ ctr_mips: mips_control
 			s_PCin	=> org_pc_v,
 			s_aluAin => sel_aluA_s,
 			s_aluBin => sel_aluB_v,
+--			s_shamt	=> sel_shamt_s,
 			wr_breg	=> reg_wr_s,
 			s_reg_add => reg_dst_s
 		);
