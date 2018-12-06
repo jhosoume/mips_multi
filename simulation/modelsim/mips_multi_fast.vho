@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "12/04/2018 22:23:58"
+-- DATE "12/05/2018 23:29:31"
 
 -- 
 -- Device: Altera EP2C35F672C6 Package FBGA672
@@ -1398,7 +1398,6 @@ SIGNAL \data~60_combout\ : std_logic;
 SIGNAL \data~61_combout\ : std_logic;
 SIGNAL \data~62_combout\ : std_logic;
 SIGNAL \data~63_combout\ : std_logic;
-SIGNAL \debug~combout\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \bcoreg|breg32_rtl_1_bypass\ : std_logic_vector(0 TO 42);
 SIGNAL \bcoreg|breg32_rtl_0_bypass\ : std_logic_vector(0 TO 42);
 SIGNAL \ir|sr_out\ : std_logic_vector(31 DOWNTO 0);
@@ -1408,6 +1407,7 @@ SIGNAL \regULA|sr_out\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \pc|sr_out\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \mem|altsyncram_component|auto_generated|q_a\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \rdm|sr_out\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \debug~combout\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \ctr_mips|ALT_INV_pstate.fetch_st~_wirecell_combout\ : std_logic;
 SIGNAL \ctr_mips|ALT_INV_pstate.fetch_st~regout\ : std_logic;
 

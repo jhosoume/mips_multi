@@ -24,15 +24,6 @@ package mips_pkg is
 	constant iJ				: std_logic_vector(5 downto 0) := "000010";
 	constant iBEQ			: std_logic_vector(5 downto 0) := "000100";
 	constant iBNE			: std_logic_vector(5 downto 0) := "000101";
-	constant iANDI			: std_logic_vector(5 downto 0) := "001100";
-	
-	constant iLH			: std_logic_vector(5 downto 0) := "100001";
-	constant iLHU			: std_logic_vector(5 downto 0) := "100101";
-	constant iLB			: std_logic_vector(5 downto 0) := "100000";
-	constant iLBU			: std_logic_vector(5 downto 0) := "100100";
-	
-	constant iSH			: std_logic_vector(5 downto 0) := "101001";
-	constant iSB			: std_logic_vector(5 downto 0) := "101000";
 	
 	-- Campo funct
 	constant iADD			: std_logic_vector(5 downto 0) := "100000";
