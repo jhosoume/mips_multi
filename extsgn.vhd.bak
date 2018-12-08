@@ -1,7 +1,6 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
 use work.mips_pkg.all;
 
 entity extsgn is
@@ -16,10 +15,9 @@ entity extsgn is
 end entity;
 		
 architecture wires of extsgn is
---signal tmp : std_logic_vector(OUT_SIZE-1 downto 0);
+signal tmp : std_logic_vector(OUT_SIZE-1 downto 0);
 begin
-	--output <= tmp;
-	--tmp(IN_SIZE-1 downto 0) <= input;
-	--tmp(OUT_SIZE-1 downto IN_SIZE) <= (others => input(IN_SIZE-1));
-	output <= std_logic_vector(resize(signed(input), 32));
+	output <= tmp;
+	tmp(IN_SIZE-1 downto 0) <= input;
+	tmp(OUT_SIZE-1 downto IN_SIZE) <= (others => input(IN_SIZE-1));
 end wires;

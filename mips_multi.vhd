@@ -45,7 +45,7 @@ signal
 			regB_v,			-- saida B do BREG
 			aluA_v,			-- entrada A da ULA
 			aluB_v,			-- entrada B da ULA
-			Bmux_v,			-- saida entre os mux de selecao da entrada B da ULA
+			Amux_v,			-- saida entre os mux de selecao da entrada A da ULA
 			alu_out_v,		-- saida ULA
 			instruction_v,	-- saida do reg de instrucoes
 			imm32_x4_v,	   -- imediato extendido e multiplicado por 4
@@ -76,7 +76,8 @@ signal
 			reg_wr_s,		-- escreve breg
 			sel_end_mem_s,	-- seleciona endereco memoria
 			sel_aluA_s,		-- seleciona entrada A da ula
-			sel_shamt_s,	-- seleciona se sera utilizado o campo shamt na entrada B da ula
+			sel_shamt_s,	-- seleciona se sera utilizado o campo shamt na entrada B da ula,
+			sel_notsigned,		-- seleciona se a extensal de sinal eh logica ou aritmetica
 			zero_s			-- sinal zero da ula
 			: std_logic;
 			
@@ -214,7 +215,7 @@ mux_ulaA: mux_2
 			in0 	=> pcout_v, 
 			in1 	=> regA_v,
 			sel 	=> sel_aluA_s,
-			m_out => aluA_v
+			m_out => Amux_v
 		);
 		
 --=======================================================================
@@ -227,7 +228,7 @@ mux_ulaB: mux_4
 			in2	=> imm32_v,
 			in3	=> imm32_x4_v,
 			sel 	=> sel_aluB_v,
-			m_out => Bmux_v
+			m_out => aluB_v
 		);
 		
 --=======================================================================
@@ -235,10 +236,10 @@ mux_ulaB: mux_4
 --=======================================================================				
 mux_shamt: mux_2
 		port map (
-			in0 	=> Bmux_v, 
+			in0 	=> Amux_v, 
 			in1 	=> shamt_32b_v,
 			sel 	=> sel_shamt_s,
-			m_out => aluB_v
+			m_out => aluA_v
 		);	
 	
 

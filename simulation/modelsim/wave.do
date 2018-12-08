@@ -1,7 +1,7 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate -label clock /mips_multi_tb/clk
-add wave -noupdate -color Gray65 -label PC_Out -radix binary /mips_multi_tb/i1/pc/sr_out
+add wave -noupdate -color Gray65 -label PC_Out -radix decimal /mips_multi_tb/i1/pc/sr_out
 add wave -noupdate -label {IR Out} -radix hexadecimal /mips_multi_tb/i1/ir/sr_out
 add wave -noupdate -label Current_State /mips_multi_tb/i1/ctr_mips/pstate
 add wave -noupdate -label {Memory Address} -radix hexadecimal -childformat {{/mips_multi_tb/i1/mem/address(7) -radix hexadecimal} {/mips_multi_tb/i1/mem/address(6) -radix hexadecimal} {/mips_multi_tb/i1/mem/address(5) -radix hexadecimal} {/mips_multi_tb/i1/mem/address(4) -radix hexadecimal} {/mips_multi_tb/i1/mem/address(3) -radix hexadecimal} {/mips_multi_tb/i1/mem/address(2) -radix hexadecimal} {/mips_multi_tb/i1/mem/address(1) -radix hexadecimal} {/mips_multi_tb/i1/mem/address(0) -radix hexadecimal}} -subitemconfig {/mips_multi_tb/i1/mem/address(7) {-height 17 -radix hexadecimal} /mips_multi_tb/i1/mem/address(6) {-height 17 -radix hexadecimal} /mips_multi_tb/i1/mem/address(5) {-height 17 -radix hexadecimal} /mips_multi_tb/i1/mem/address(4) {-height 17 -radix hexadecimal} /mips_multi_tb/i1/mem/address(3) {-height 17 -radix hexadecimal} /mips_multi_tb/i1/mem/address(2) {-height 17 -radix hexadecimal} /mips_multi_tb/i1/mem/address(1) {-height 17 -radix hexadecimal} /mips_multi_tb/i1/mem/address(0) {-height 17 -radix hexadecimal}} /mips_multi_tb/i1/mem/address
@@ -39,7 +39,7 @@ add wave -noupdate -color Blue -label ALU/AluControl -radix binary /mips_multi_t
 add wave -noupdate -label OPCODE -radixenum symbolic /mips_multi_tb/i1/ctr_mips/opcode
 add wave -noupdate -color Blue -label sel_shamt -radix binary /mips_multi_tb/i1/mux_shamt/sel
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {229 ps} 0}
+WaveRestoreCursors {{Cursor 1} {353 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 230
 configure wave -valuecolwidth 100
@@ -55,4 +55,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ps} {300 ps}
+WaveRestoreZoom {180 ps} {480 ps}
