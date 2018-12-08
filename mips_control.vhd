@@ -20,6 +20,7 @@ ENTITY mips_control IS
 		s_aluAin : OUT std_logic;
 		s_aluBin : OUT std_logic_vector (1 DOWNTO 0);
 --		s_shamt	: OUT std_logic;
+		s_ext_unsigned : OUT std_logic;
 		wr_breg	: OUT std_logic;
 		s_reg_add: OUT std_logic
 	);
@@ -31,6 +32,7 @@ ARCHITECTURE control_op OF mips_control IS
 	type ctr_state is (	fetch_st,     -- 0000
 								decode_st,    -- 0001
 								c_mem_add_st, -- 0010
+								logical_imm_st,
 								readmem_st, 
 								ldreg_st, 
 								writemem_st, 
@@ -55,8 +57,8 @@ reg: process(clk, rst)
 		
 logic: process (opcode, pstate)
 	begin
-		wr_ir		<= '0';
-		wr_pc		<= '0';
+		wr_ir		 	<= '0';
+		wr_pc			<= '0';
 		wr_mem		<= '0';
 		wr_breg		<= '0';
 		is_beq 		<= '0';
@@ -68,6 +70,7 @@ logic: process (opcode, pstate)
 		s_aluAin 	<= '0';
 		s_aluBin  	<= "00";
 		s_reg_add 	<= '0';
+		s_ext_unsigned <= '0'; 
 --		s_shamt		<= '0';
 		case pstate is 
 			when fetch_st 		=> wr_pc 	<= '1';
@@ -78,6 +81,10 @@ logic: process (opcode, pstate)
 								
 			when c_mem_add_st => s_aluAin <= '1';
 										s_aluBin <= "10";
+										
+			when logical_imm_st => s_aluAin <= '1';
+										s_aluBin <= "10";
+										s_ext_unsigned <= '1'; 
 										
 			when readmem_st 	=> s_mem_add <= '1';
 								 
@@ -120,7 +127,8 @@ new_state: process (opcode, pstate)
 			when fetch_st => 	nstate <= decode_st;
 			when decode_st =>	case opcode is
 									when iRTYPE => nstate <= rtype_ex_st;
-									when iLW | iSW | iADDI | iORI | iANDI => nstate <= c_mem_add_st;
+									when iLW | iSW | iADDI => nstate <= c_mem_add_st;
+									when iORI | iANDI => nstate <= logical_imm_st;
 									when iBEQ | iBNE => nstate <= branch_ex_st;
 									when iJ => nstate <= jump_ex_st;
 									when others => null;
@@ -131,6 +139,7 @@ new_state: process (opcode, pstate)
 									when iADDI | iORI | iANDI => nstate <= arith_imm_st;
 									when others => null;
 								 end case;
+			when logical_imm_st => nstate <= arith_imm_st;
 			when readmem_st 	=> nstate <= ldreg_st;
 			when rtype_ex_st 	=> nstate <= writereg_st;
 			when others 		=> nstate <= fetch_st;

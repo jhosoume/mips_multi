@@ -216,6 +216,7 @@ package mips_pkg is
 		s_aluBin : OUT std_logic_vector (1 DOWNTO 0);
 --		s_shamt	: OUT std_logic;
 		wr_breg	: OUT std_logic;
+		s_ext_unsigned : OUT std_logic;
 		s_reg_add: OUT std_logic
 	);
 	END component;
@@ -241,6 +242,7 @@ component extsgn is
 		OUT_SIZE : natural := 32	
 		);
 	port (
+		is_unsigned : in std_logic;
 		input : in std_logic_vector(IN_SIZE-1 downto 0);
 		output: out std_logic_vector(OUT_SIZE-1 downto 0)
 		);

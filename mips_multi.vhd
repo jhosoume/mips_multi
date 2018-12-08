@@ -204,7 +204,9 @@ rgB:	regbuf
 --=======================================================================
 sgnx:	extsgn
 		port map (
-			input => imm16_field_v, output => imm32_v
+			is_unsigned => sel_notsigned,
+			input => imm16_field_v, 
+			output => imm32_v
 		);
 
 --=======================================================================
@@ -307,6 +309,7 @@ ctr_mips: mips_control
 			s_aluBin => sel_aluB_v,
 --			s_shamt	=> sel_shamt_s,
 			wr_breg	=> reg_wr_s,
+			s_ext_unsigned => sel_notsigned,
 			s_reg_add => reg_dst_s
 		);
 		

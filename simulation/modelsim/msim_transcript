@@ -171,6 +171,16 @@
 # Loading work.mips_control(control_op)
 # 
 # add wave *
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: unknown  Hostname: alligator  ProcessID: 6291
+#           Attempting to use alternate WLF file "./wlftEaa83t".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftEaa83t
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -2703,3 +2713,4 @@ run -all
 #    Time: 1821 ps  Iteration: 2  Instance: /mips_multi_tb/i1/mem/altsyncram_component
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 1821 ps  Iteration: 2  Instance: /mips_multi_tb/i1/mem/altsyncram_component
+# FATAL ERROR: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.
