@@ -19,6 +19,13 @@
 # -- Compiling package mips_pkg
 # -- Compiling package body mips_pkg
 # -- Loading package mips_pkg
+# vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/byteenabled_mem.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity byteenabled_mem
+# -- Compiling architecture SYN of byteenabled_mem
 # vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/reg.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -53,16 +60,6 @@
 # -- Loading package mips_pkg
 # -- Compiling entity mux_2
 # -- Compiling architecture rtl of mux_2
-# vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_mem.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package mips_pkg
-# -- Loading package altera_mf_components
-# -- Compiling entity mips_mem
-# -- Compiling architecture rtl of mips_mem
 # vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/breg.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -155,8 +152,7 @@
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_signed(body)
 # Loading work.mux_2(rtl)
-# Loading altera_mf.altera_mf_components
-# Loading work.mips_mem(rtl)
+# Loading work.byteenabled_mem(syn)
 # Loading ieee.std_logic_unsigned(body)
 # Loading altera_mf.altera_common_conversion(body)
 # Loading altera_mf.altera_device_families(body)
@@ -177,10 +173,10 @@
 # ** Error: Cannot lock WLF file: "vsim.wlf"
 #           errno 11: Resource temporarily unavailable.
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: unknown  Hostname: alligator  ProcessID: 6291
-#           Attempting to use alternate WLF file "./wlftEaa83t".
+#           File in use by: unknown  Hostname: alligator  ProcessID: 9199
+#           Attempting to use alternate WLF file "./wlftIDRbWq".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftEaa83t
+#           Using alternate file: ./wlftIDRbWq
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals

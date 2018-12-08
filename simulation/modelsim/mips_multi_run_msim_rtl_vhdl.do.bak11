@@ -6,11 +6,11 @@ vlib rtl_work
 vmap work rtl_work
 
 vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_pkg.vhd}
+vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/byteenabled_mem.vhd}
 vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/reg.vhd}
 vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/regbuf.vhd}
 vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_multi.vhd}
 vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mux_2.vhd}
-vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_mem.vhd}
 vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/breg.vhd}
 vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/extsgn.vhd}
 vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mux_4.vhd}

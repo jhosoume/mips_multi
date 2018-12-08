@@ -40,14 +40,17 @@ LIBRARY altera_mf;
 USE altera_mf.all;
 
 ENTITY byteenabled_mem IS
+	generic (
+		WIDTH : natural := 32;
+		WADDR : natural := 8);
 	PORT
 	(
-		address		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		address		: IN STD_LOGIC_VECTOR (WADDR - 1  DOWNTO 0);
 		byteena		: IN STD_LOGIC_VECTOR (3 DOWNTO 0) :=  (OTHERS => '1');
-		clock		: IN STD_LOGIC  := '1';
-		data		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-		wren		: IN STD_LOGIC ;
-		q		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+		clk			: IN STD_LOGIC;
+		data			: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+		wren			: IN STD_LOGIC ;
+		q				: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
 END byteenabled_mem;
 
@@ -110,7 +113,7 @@ BEGIN
 	PORT MAP (
 		address_a => address,
 		byteena_a => byteena,
-		clock0 => clock,
+		clock0 => clk,
 		data_a => data,
 		wren_a => wren,
 		q_a => sub_wire0

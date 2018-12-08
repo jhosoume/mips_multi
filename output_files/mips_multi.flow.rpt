@@ -1,5 +1,5 @@
 Flow report for mips_multi
-Sat Dec  8 00:45:45 2018
+Sat Dec  8 20:22:49 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sat Dec  8 00:45:45 2018           ;
+; Flow Status                        ; Successful - Sat Dec  8 20:22:49 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; mips_multi                                      ;
 ; Top-level Entity Name              ; mips_multi                                      ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/08/2018 00:45:10 ;
+; Start date & time ; 12/08/2018 20:22:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mips_multi          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 0.154423711009854                     ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 0.154430773311063                     ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; i1                                    ; --            ; --          ; tb             ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb                                    ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation ;
@@ -86,13 +86,10 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_NAME                  ; tb                                    ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 10 ns                                 ; --            ; --          ; tb             ;
 ; IP_TOOL_NAME                         ; RAM: 1-PORT                           ; --            ; --          ; --             ;
-; IP_TOOL_NAME                         ; RAM: 1-PORT                           ; --            ; --          ; --             ;
-; IP_TOOL_VERSION                      ; 13.0                                  ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                      ; 13.0                                  ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --             ;
 ; MISC_FILE                            ; byteenabled_mem.cmp                   ; --            ; --          ; --             ;
-; MISC_FILE                            ; mem_byenabled.cmp                     ; --            ; --          ; --             ;
 ; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
 ; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; --          ; Top            ;
@@ -107,8 +104,8 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 653 MB              ; 00:00:07                           ;
-; Fitter                    ; 00:00:16     ; 1.0                     ; 735 MB              ; 00:00:16                           ;
+; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 654 MB              ; 00:00:07                           ;
+; Fitter                    ; 00:00:16     ; 1.0                     ; 729 MB              ; 00:00:16                           ;
 ; Assembler                 ; 00:00:02     ; 1.0                     ; 569 MB              ; 00:00:02                           ;
 ; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 528 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 809 MB              ; 00:00:01                           ;

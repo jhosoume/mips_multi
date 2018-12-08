@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "12/08/2018 00:45:45"
+-- DATE "12/08/2018 20:22:48"
 
 -- 
 -- Device: Altera EP2C35F672C6 Package FBGA672
@@ -5162,7 +5162,7 @@ GENERIC MAP (
 	data_interleave_width_in_bits => 1,
 	init_file => "mips_rom.mif",
 	init_file_layout => "port_a",
-	logical_ram_name => "mips_mem:mem|altsyncram:altsyncram_component|altsyncram_c4e1:auto_generated|ALTSYNCRAM",
+	logical_ram_name => "byteenabled_mem:mem|altsyncram:altsyncram_component|altsyncram_f7f1:auto_generated|ALTSYNCRAM",
 	operation_mode => "single_port",
 	port_a_address_clear => "none",
 	port_a_address_width => 8,
@@ -12319,7 +12319,7 @@ GENERIC MAP (
 	data_interleave_width_in_bits => 1,
 	init_file => "mips_rom.mif",
 	init_file_layout => "port_a",
-	logical_ram_name => "mips_mem:mem|altsyncram:altsyncram_component|altsyncram_c4e1:auto_generated|ALTSYNCRAM",
+	logical_ram_name => "byteenabled_mem:mem|altsyncram:altsyncram_component|altsyncram_f7f1:auto_generated|ALTSYNCRAM",
 	operation_mode => "single_port",
 	port_a_address_clear => "none",
 	port_a_address_width => 8,

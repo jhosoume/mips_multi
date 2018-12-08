@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_signed.all;
+use work.mips_pkg.all;
+
+entity store_byte_selector is
+	generic (
+		SIZE : natural := 32 );
+	port (
+	 	data_in		: in std_logic_vector(SIZE-1 downto 0);
+		sel			: in std_logic(1 downto 0);
+		data_out		: out std_logic_vector(SIZE-1 downto 0));
+end entity;
+
+architecture rtl of store_byte_selector is
+alias    func_field_v 	: std_logic_vector(5 downto 0)  is instruction_v(5 downto 0);
+	alias b0	: std_logic_vector(7 downto 0) is data_in(7 downto 0);
+	alias b1	: std_logic_vector(15 downto 8) is data_in(7 downto 0);
+	alias b2	: std_logic_vector(23 downto 16) is data_in(7 downto 0);
+	alias b3	: std_logic_vector(31 downto 24) is data_in(7 downto 0);
+begin
+	m_out <= in0 when (sel = '0')	else in1;
+end architecture;

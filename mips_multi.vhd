@@ -61,6 +61,8 @@ signal sel_aluB_v 		: std_logic_vector(1 downto 0);	-- seleciona entrada B da ul
 signal alu_op_v			: std_logic_vector(2 downto 0);	-- codigo op ula
 signal org_pc_v			: std_logic_vector(1 downto 0);	-- selecao entrada do PC
 
+signal databyteaddr_v 	: std_logic_vector(1 downto 0); 	-- seleciona o byte
+
 signal 	
 			branch_s,		-- beq ou bne
 			is_beq_s,    	-- beq
@@ -105,9 +107,11 @@ pc_wr_s 		<= jump_s or (zero_s and is_beq_s) or ((not zero_s) and is_bne_s);
 
 imm32_x4_v 	<= imm32_v(29 downto 0) & "00";
 
-datadd_v		<= X"000000" & '1' & rULA_out_v(8 downto 2);
+datadd_v		<= X"000000" & '1' & rULA_out_v(8 downto 2); -- Endereco do dado sem a indicacao do byte
 
-intadd_v		<= X"000000" & pcout_v(9 downto 2); 
+databyteaddr_v <= rULA_out_v(1 downto 0);						-- Endereco do byte do dado 
+
+intadd_v		<= X"000000" & pcout_v(9 downto 2); 			-- Endereco da instrucao multiplicado por 2
 
 shamt_32b_v <= X"000000" & '0' & '0' & '0' & sht_field_v;
 
@@ -133,7 +137,7 @@ mux_mem: mux_2
 --=======================================================================
 -- Memoria do MIPS
 --=======================================================================		
-mem:  mips_mem
+mem:  byteenabled_mem
 		port map (address => memadd_v(7 downto 0), data => regB_v, wren => mem_wr_s, clk => clk_rom, Q => memout_v );
 	
 --=======================================================================

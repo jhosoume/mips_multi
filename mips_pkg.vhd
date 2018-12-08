@@ -278,6 +278,45 @@ component data_mem is
 		q			: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
 end component;
+
+component byteenabled_mem is
+	generic (
+		WIDTH : natural := 32;
+		WADDR : natural := IMEM_ADDR);
+	port
+	(
+		address	: IN STD_LOGIC_VECTOR (WADDR-1 DOWNTO 0);
+		byteena	: IN STD_LOGIC_VECTOR (3 DOWNTO 0) :=  (OTHERS => '1');
+		clk		: IN STD_LOGIC;
+		data		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+		wren		: IN STD_LOGIC ;
+		q			: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+	);
+end component;
+
+component load_byte_selector is
+	generic (
+		SIZE : natural := 32 );
+	port (
+	 	data_in		: in std_logic_vector(SIZE-1 downto 0);
+		byteaddr		: in std_logic_vector(1 downto 0); -- recebe qual o byte a ser lido
+		sel			: in std_logic_vector(2 downto 0) :=  (OTHERS => '0');
+		byteaddress : in std_logic_vector(3 downto 0);
+		data_out		: out std_logic_vector(SIZE-1 downto 0));
+end component;
+
+component store_byte_selector is
+	generic (
+		SIZE : natural := 32 );
+	port (
+	 	data_in		: in std_logic_vector(SIZE-1 downto 0);
+		byteaddr		: in std_logic_vector(1 downto 0); -- recebe qual o byte a ser escrito
+		sel			: in std_logic_vector(1 downto 0) :=  (OTHERS => '0'); -- qual a instrucao a ser exec (sb, sh ou sw)
+		data_out		: out std_logic_vector(SIZE-1 downto 0);
+		byteena		: out std_logic_vector(3 downto 0));
+end component;
+
+	
 	
 --	procedure mux2x1 (signal x0, x1	: in std_logic_vector(WORD_SIZE-1 downto 0); 
 --							signal sel	: in std_logic;
