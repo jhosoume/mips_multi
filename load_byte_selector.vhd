@@ -9,9 +9,8 @@ entity load_byte_selector is
 		SIZE : natural := 32 );
 	port (
 	 	data_in		: in std_logic_vector(SIZE-1 downto 0);
-		byteaddr		: in std_logic_vector(1 downto 0); -- recebe qual o byte a ser lido
-		sel			: in std_logic_vector(2 downto 0) :=  (OTHERS => '0');
-		byteaddress : in std_logic_vector(3 downto 0);
+		sel			: in std_logic_vector(2 downto 0);
+		byteaddress : in std_logic_vector(1 downto 0); -- recebe qual o byte a ser lido
 		data_out		: out std_logic_vector(SIZE-1 downto 0));
 end entity;
 

@@ -217,6 +217,8 @@ package mips_pkg is
 --		s_shamt	: OUT std_logic;
 		wr_breg	: OUT std_logic;
 		s_ext_unsigned : OUT std_logic;
+		s_store	: OUT std_logic_vector (1 DOWNTO 0);
+		s_load	: OUT std_logic_vector (2 DOWNTO 0);
 		s_reg_add: OUT std_logic
 	);
 	END component;
@@ -299,9 +301,8 @@ component load_byte_selector is
 		SIZE : natural := 32 );
 	port (
 	 	data_in		: in std_logic_vector(SIZE-1 downto 0);
-		byteaddr		: in std_logic_vector(1 downto 0); -- recebe qual o byte a ser lido
-		sel			: in std_logic_vector(2 downto 0) :=  (OTHERS => '0');
-		byteaddress : in std_logic_vector(3 downto 0);
+		sel			: in std_logic_vector(2 downto 0);
+		byteaddress : in std_logic_vector(1 downto 0);  -- recebe qual o byte a ser lido
 		data_out		: out std_logic_vector(SIZE-1 downto 0));
 end component;
 
@@ -311,7 +312,7 @@ component store_byte_selector is
 	port (
 	 	data_in		: in std_logic_vector(SIZE-1 downto 0);
 		byteaddr		: in std_logic_vector(1 downto 0); -- recebe qual o byte a ser escrito
-		sel			: in std_logic_vector(1 downto 0) :=  (OTHERS => '0'); -- qual a instrucao a ser exec (sb, sh ou sw)
+		sel			: in std_logic_vector(1 downto 0); -- qual a instrucao a ser exec (sb, sh ou sw)
 		data_out		: out std_logic_vector(SIZE-1 downto 0);
 		byteena		: out std_logic_vector(3 downto 0));
 end component;

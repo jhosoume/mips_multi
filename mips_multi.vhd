@@ -50,6 +50,8 @@ signal
 			instruction_v,	-- saida do reg de instrucoes
 			imm32_x4_v,	   -- imediato extendido e multiplicado por 4
 			imm32_v,			-- imediato extendido a 32 bits
+			mem_bytesel_v,	-- saida da selecao de bytes para store
+			load_bytesel_v,-- saida de selecao do byte para o load
 			shamt_32b_v		-- gera sinal de 32 bits pra shamt
 			: std_logic_vector(WORD_SIZE-1 downto 0);
 			
@@ -58,6 +60,9 @@ signal rset_s, clock_s 	: std_logic;
 signal iwreg_v 			: std_logic_vector(4 downto 0);  -- indice registador escrito
 signal alu_sel_v			: std_logic_vector(3 downto 0);  -- indice registador escrito
 signal sel_aluB_v 		: std_logic_vector(1 downto 0);	-- seleciona entrada B da ula
+signal sel_store_v		: std_logic_vector(1 downto 0);	-- seleciona se eh word, half ou byte para store
+signal sel_load_v			: std_logic_vector(2 downto 0);	-- seleciona se eh word, half ou byte para load
+signal sel_byte_enable	: std_logic_vector(3 downto 0);
 signal alu_op_v			: std_logic_vector(2 downto 0);	-- codigo op ula
 signal org_pc_v			: std_logic_vector(1 downto 0);	-- selecao entrada do PC
 
@@ -138,21 +143,26 @@ mux_mem: mux_2
 -- Memoria do MIPS
 --=======================================================================		
 mem:  byteenabled_mem
-		port map (address => memadd_v(7 downto 0), data => regB_v, wren => mem_wr_s, clk => clk_rom, Q => memout_v );
+		port map (address => memadd_v(7 downto 0), 
+					 data => mem_bytesel_v, 
+					 wren => mem_wr_s, 
+					 clk => clk_rom,
+					 byteena => sel_byte_enable,
+					 Q => memout_v );
 	
 --=======================================================================
 -- RI - registrador de instruções
 --=======================================================================	
 ir:	reg
 		generic map (SIZE => 32)
-		port map (sr_in => memout_v, sr_out => instruction_v, rst => '0', clk => clk, enable => ir_wr_s );
+		port map (sr_in => load_bytesel_v, sr_out => instruction_v, rst => '0', clk => clk, enable => ir_wr_s );
 
 --=======================================================================
 -- RDM - registrador de dados da memoria
 --=======================================================================
 rdm:	regbuf 
 		generic map (SIZE => 32)
-		port map (sr_in => memout_v, clk => clk, sr_out => rdmout_v);
+		port map (sr_in => load_bytesel_v, clk => clk, sr_out => rdmout_v);
 	
 --=======================================================================
 -- Mux para enderecamento do registrador a ser escrito
@@ -314,7 +324,34 @@ ctr_mips: mips_control
 --			s_shamt	=> sel_shamt_s,
 			wr_breg	=> reg_wr_s,
 			s_ext_unsigned => sel_notsigned,
+			s_store => sel_store_v,
+			s_load => sel_load_v,
 			s_reg_add => reg_dst_s
+		);
+		
+--=======================================================================
+-- Unidade de Selecao do Store
+--=======================================================================		
+mips_store: store_byte_selector
+		generic map (SIZE => 32)
+		port map (	
+			data_in		=> regB_v,
+			byteaddr		=> databyteaddr_v,
+			sel			=> sel_store_v,
+			byteena		=> sel_byte_enable,
+			data_out		=> mem_bytesel_v
+		);
+
+--=======================================================================
+-- Unidade de Selecao do Load
+--=======================================================================		
+mips_load: load_byte_selector
+		generic map (SIZE => 32)
+		port map (	
+			data_in		=> memout_v,
+			byteaddress => databyteaddr_v,
+			sel			=> sel_load_v,
+			data_out		=> load_bytesel_v
 		);
 		
 end architecture;
