@@ -71,7 +71,7 @@ END PROCESS init;
 
 clkgen : PROCESS                                                                               
 BEGIN                                                 
-			for i in 0 to 1000 loop
+			for i in 0 to 1100 loop
 			clk_rom <= '1';
 			wait for 1 ps;
 			clk_rom <= '0';
@@ -82,7 +82,7 @@ END PROCESS clkgen;
                                        
 always : PROCESS                                                                               
 BEGIN                                                 
-			for i in 0 to 100 loop
+			for i in 0 to 110 loop
 			clk <= '1';
 			wait for 10 ps;
 			clk <= '0';

@@ -40,6 +40,16 @@ add wave -noupdate -color Blue -label ALUControl/Alu_Ctr -radix octal /mips_mult
 add wave -noupdate -color Blue -label ALU/AluControl -radix binary /mips_multi_tb/i1/alu/aluctl
 add wave -noupdate -label OPCODE -radixenum symbolic /mips_multi_tb/i1/ctr_mips/opcode
 add wave -noupdate -color Blue -label sel_shamt -radix binary /mips_multi_tb/i1/mux_shamt/sel
+add wave -noupdate -color Pink -label {Devug LOAD DATA IN} -radix hexadecimal /mips_multi_tb/i1/mips_load/data_in
+add wave -noupdate -color Pink -label {Debug LOAD Type} -radix decimal /mips_multi_tb/i1/mips_load/sel
+add wave -noupdate -color Pink -label {Debug LOAD BYTE ADDRESS} -radix decimal /mips_multi_tb/i1/mips_load/byteaddress
+add wave -noupdate -color Pink -label {Debug LOAD DATA OUT} -radix hexadecimal /mips_multi_tb/i1/mips_load/data_out
+add wave -noupdate -color Pink -label TMP1BYTE -radix hexadecimal /mips_multi_tb/i1/mips_load/tmp1byte
+add wave -noupdate -color Pink -label TMP2BYTES -radix hexadecimal /mips_multi_tb/i1/mips_load/tmp2bytes
+add wave -noupdate -color Pink -radix hexadecimal /mips_multi_tb/i1/mips_load/b3
+add wave -noupdate -color Pink -radix hexadecimal /mips_multi_tb/i1/mips_load/b2
+add wave -noupdate -color Pink -radix hexadecimal /mips_multi_tb/i1/mips_load/b1
+add wave -noupdate -color Pink -radix hexadecimal /mips_multi_tb/i1/mips_load/b0
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {353 ps} 0}
 quietly wave cursor active 1
@@ -57,4 +67,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {15 ps} {315 ps}
+WaveRestoreZoom {0 ps} {300 ps}

@@ -1,5 +1,5 @@
 Flow report for mips_multi
-Sun Dec  9 15:53:02 2018
+Sun Dec  9 16:30:21 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sun Dec  9 15:53:02 2018           ;
+; Flow Status                        ; Successful - Sun Dec  9 16:30:21 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; mips_multi                                      ;
 ; Top-level Entity Name              ; mips_multi                                      ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 1,205 / 33,216 ( 4 % )                          ;
-;     Total combinational functions  ; 1,165 / 33,216 ( 4 % )                          ;
+; Total logic elements               ; 1,240 / 33,216 ( 4 % )                          ;
+;     Total combinational functions  ; 1,209 / 33,216 ( 4 % )                          ;
 ;     Dedicated logic registers      ; 249 / 33,216 ( < 1 % )                          ;
 ; Total registers                    ; 249                                             ;
 ; Total pins                         ; 37 / 475 ( 8 % )                                ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/09/2018 15:52:26 ;
+; Start date & time ; 12/09/2018 16:29:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mips_multi          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 0.154437794510677                     ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 0.154438018411503                     ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; i1                                    ; --            ; --          ; tb             ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb                                    ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation ;
@@ -104,12 +104,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 658 MB              ; 00:00:08                           ;
-; Fitter                    ; 00:00:17     ; 1.0                     ; 737 MB              ; 00:00:16                           ;
+; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 658 MB              ; 00:00:09                           ;
+; Fitter                    ; 00:00:16     ; 1.0                     ; 735 MB              ; 00:00:16                           ;
 ; Assembler                 ; 00:00:02     ; 1.0                     ; 569 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 531 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 814 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:29     ; --                      ; --                  ; 00:00:28                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 526 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 809 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:28     ; --                      ; --                  ; 00:00:29                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

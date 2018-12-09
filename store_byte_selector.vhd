@@ -20,9 +20,9 @@ end entity;
 
 architecture rtl of store_byte_selector is
 	alias b0	: std_logic_vector(7 downto 0) is data_in(7 downto 0);
-	alias b1	: std_logic_vector(15 downto 8) is data_in(7 downto 0);
-	alias b2	: std_logic_vector(23 downto 16) is data_in(7 downto 0);
-	alias b3	: std_logic_vector(31 downto 24) is data_in(7 downto 0);
+	alias b1	: std_logic_vector(7 downto 0) is data_in(15 downto 8);
+	alias b2	: std_logic_vector(7 downto 0) is data_in(23 downto 16);
+	alias b3	: std_logic_vector(7 downto 0) is data_in(31 downto 24);
 begin
 	data_out <= data_in when (sel = "00") else
 					(b1 & b0 & b1 & b0) when (sel = "10") else

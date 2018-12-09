@@ -17,7 +17,7 @@ L8
 V>TeeGbYUfJcFCR_4=zibh1
 Z9 OV;C;10.1d;51
 31
-Z10 !s108 1544377993.649004
+Z10 !s108 1544380228.382480
 Z11 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/alu_ctr.vhd|
 Z12 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/alu_ctr.vhd|
 Z13 o-93 -work work -O0
@@ -58,7 +58,7 @@ L10
 V@8`bB?R9g4L5C@Ug6HJ?73
 R9
 31
-Z20 !s108 1544377993.555475
+Z20 !s108 1544380228.290401
 Z21 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/breg.vhd|
 Z22 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/breg.vhd|
 R13
@@ -97,7 +97,7 @@ L42
 Vj@_`9@2GY2VMoOCYIo?V;3
 R9
 31
-Z26 !s108 1544377993.362064
+Z26 !s108 1544380228.099228
 Z27 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/byteenabled_mem.vhd|
 Z28 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/byteenabled_mem.vhd|
 R13
@@ -134,7 +134,7 @@ L7
 VWfN8:h1R?X8>52S]m[V<=0
 R9
 31
-Z32 !s108 1544377993.588140
+Z32 !s108 1544380228.322245
 Z33 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/extsgn.vhd|
 Z34 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/extsgn.vhd|
 R13
@@ -160,7 +160,7 @@ R14
 !s100 ]2aom87bWEF>c2EhnMzkK1
 !i10b 1
 Eload_byte_selector
-Z35 w1544311042
+Z35 w1544380159
 R3
 R2
 R16
@@ -175,7 +175,7 @@ L7
 VaTCnh89Z9hcjSC9SkWd7>0
 R9
 31
-Z39 !s108 1544377993.490158
+Z39 !s108 1544380228.225990
 Z40 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/load_byte_selector.vhd|
 Z41 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/load_byte_selector.vhd|
 R13
@@ -192,7 +192,7 @@ R5
 DEx4 work 18 load_byte_selector 0 22 aTCnh89Z9hcjSC9SkWd7>0
 l38
 L30
-VzK;P[L;3J`JZCeGIk1d>80
+VRTj_OHTHh_U^YZ6>::5zQ3
 R9
 31
 R39
@@ -200,7 +200,7 @@ R40
 R41
 R13
 R14
-!s100 ]JS0YiKW^PZh:Na`C9h5c1
+!s100 z^6]eVYX:CNOOm`RDM`BX3
 !i10b 1
 Emips_control
 Z42 w1544377935
@@ -216,7 +216,7 @@ L5
 V;1@]_3S@NEjEbgB0CZ2Qz3
 R9
 31
-Z45 !s108 1544377993.740151
+Z45 !s108 1544380228.473954
 Z46 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_control.vhd|
 Z47 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_control.vhd|
 R13
@@ -255,7 +255,7 @@ L8
 Vc5e]jH`emI3iKd>ZMXh192
 R9
 31
-Z51 !s108 1544377993.427326
+Z51 !s108 1544380228.164278
 Z52 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_multi.vhd|
 Z53 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_multi.vhd|
 R13
@@ -281,7 +281,7 @@ R14
 !s100 QQRXCoeB_H]<L`AiA>=cM1
 !i10b 1
 Emips_multi_tb
-Z54 w1544046769
+Z54 w1544378961
 R4
 R5
 R6
@@ -294,7 +294,7 @@ Vh<D<TKJ[Y=5kZ32Wk;baL3
 R9
 31
 !i10b 1
-Z57 !s108 1544377993.770305
+Z57 !s108 1544380228.504180
 Z58 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_multi_tb.vhd|
 Z59 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_multi_tb.vhd|
 R13
@@ -305,8 +305,8 @@ R5
 DEx4 work 13 mips_multi_tb 0 22 h<D<TKJ[Y=5kZ32Wk;baL3
 l52
 L33
-VKJ;Q3aOZEI??6i6n1M6FT1
-!s100 3B??Jm1k`3mVa8IiE;Q@83
+VYcXhm`6K2U_2nj9KLiUCT3
+!s100 mVheQ8CEUE5Qa:Ng9OK7S2
 R9
 31
 !i10b 1
@@ -328,7 +328,7 @@ L6
 V=;OSMS[Dfl<iAW74??Pj52
 R9
 31
-Z63 !s108 1544377993.331669
+Z63 !s108 1544380228.068960
 Z64 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_pkg.vhd|
 Z65 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_pkg.vhd|
 R13
@@ -369,7 +369,7 @@ L6
 Vg0Io]c`bdUN4[=;LL9M6=2
 R9
 31
-Z69 !s108 1544377993.523065
+Z69 !s108 1544380228.258441
 Z70 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mux_2.vhd|
 Z71 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mux_2.vhd|
 R13
@@ -412,7 +412,7 @@ L6
 VNA_IWTgOn=MT0>d7<2TSR0
 R9
 31
-Z75 !s108 1544377993.707447
+Z75 !s108 1544380228.441483
 Z76 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mux_3.vhd|
 Z77 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mux_3.vhd|
 R13
@@ -455,7 +455,7 @@ L6
 VU^TFaTngo2GPVVYQJhzT12
 R9
 31
-Z81 !s108 1544377993.616659
+Z81 !s108 1544380228.350262
 Z82 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mux_4.vhd|
 Z83 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mux_4.vhd|
 R13
@@ -494,7 +494,7 @@ L7
 V=M[ABcRJOEGR;Bk2YdQ=C3
 R9
 31
-Z87 !s108 1544377993.385601
+Z87 !s108 1544380228.122554
 Z88 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/reg.vhd|
 Z89 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/reg.vhd|
 R13
@@ -529,7 +529,7 @@ L7
 V<YlF2G;hj=P5B33heZJQR3
 R9
 31
-Z93 !s108 1544377993.406601
+Z93 !s108 1544380228.143493
 Z94 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/regbuf.vhd|
 Z95 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/regbuf.vhd|
 R13
@@ -553,7 +553,7 @@ R14
 !s100 dU0zZFiXlE=gIaOd@PWTE1
 !i10b 1
 Estore_byte_selector
-Z96 w1544310894
+Z96 w1544380118
 R2
 R3
 R16
@@ -568,7 +568,7 @@ L6
 V_Nm8i?2ZWm[PZOA8`Q]B52
 R9
 31
-Z99 !s108 1544377993.457671
+Z99 !s108 1544380228.194541
 Z100 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/store_byte_selector.vhd|
 Z101 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/store_byte_selector.vhd|
 R13
@@ -585,7 +585,7 @@ R5
 DEx4 work 19 store_byte_selector 0 22 _Nm8i?2ZWm[PZOA8`Q]B52
 l26
 L21
-V;c>of1]N]=n93e=RJ=>S51
+VH0bV5=Z0VgR]L0=7RY?l>2
 R9
 31
 R99
@@ -593,7 +593,7 @@ R100
 R101
 R13
 R14
-!s100 0[kKjbfL=J6bA[ULDa43[3
+!s100 ZA82bBizUJX_Fz^P0d53=2
 !i10b 1
 Eulamips
 Z102 w1447767356
@@ -609,7 +609,7 @@ L6
 VzoaDkdk7>JLIQh>98S8oV1
 R9
 31
-Z105 !s108 1544377993.677958
+Z105 !s108 1544380228.411641
 Z106 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/ulamips.vhd|
 Z107 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/ulamips.vhd|
 R13
