@@ -185,6 +185,10 @@ new_state: process (opcode, pstate)
 								 end case;
 			when logical_imm_or_st | logical_imm_and_st => nstate <= arith_imm_st;
 			when readmem_st 	=> nstate <= ldreg_st;
+			when readmem_half_st 	=> nstate <= ldreg_st;
+			when readmem_half_u_st 	=> nstate <= ldreg_st;
+			when readmem_byte_st 	=> nstate <= ldreg_st;
+			when readmem_byte_u_st 	=> nstate <= ldreg_st;
 			when rtype_ex_st 	=> nstate <= writereg_st;
 			when others 		=> nstate <= fetch_st;
 			end case;
