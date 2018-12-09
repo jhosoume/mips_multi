@@ -34,7 +34,8 @@ ARCHITECTURE control_op OF mips_control IS
 	type ctr_state is (	fetch_st,     -- 0000
 								decode_st,    -- 0001
 								c_mem_add_st, -- 0010
-								logical_imm_st,
+								logical_imm_or_st,
+								logical_imm_and_st,
 								readmem_st,
 								readmem_half_st,
 								readmem_byte_st,
@@ -92,9 +93,15 @@ logic: process (opcode, pstate)
 			when c_mem_add_st 		=> s_aluAin <= '1';
 												s_aluBin <= "10";
 										
-			when logical_imm_st	 	=> s_aluAin <= '1';
+			when logical_imm_or_st	 	=> s_aluAin <= '1';
 												s_aluBin <= "10";
-												s_ext_unsigned <= '1'; 
+												s_ext_unsigned <= '1';
+												op_alu <= "001";
+												
+		   when logical_imm_and_st	 	=> s_aluAin <= '1';
+												s_aluBin <= "10";
+												s_ext_unsigned <= '1';
+												op_alu <= "100";
 										
 			when readmem_st	 		=> s_mem_add <= '1';
 			
@@ -158,7 +165,8 @@ new_state: process (opcode, pstate)
 			when decode_st =>	case opcode is
 									when iRTYPE => nstate <= rtype_ex_st;
 									when iLW | iSW | iADDI | iLH | iLHU | iLB | iLBU | iSH | iSB => nstate <= c_mem_add_st;
-									when iORI | iANDI => nstate <= logical_imm_st;
+									when iORI  => nstate <= logical_imm_or_st;
+									when iANDI => nstate <= logical_imm_and_st;
 									when iBEQ | iBNE => nstate <= branch_ex_st;
 									when iJ => nstate <= jump_ex_st;
 									when others => null;
@@ -175,7 +183,7 @@ new_state: process (opcode, pstate)
 									when iADDI | iORI | iANDI => nstate <= arith_imm_st;
 									when others => null;
 								 end case;
-			when logical_imm_st => nstate <= arith_imm_st;
+			when logical_imm_or_st | logical_imm_and_st => nstate <= arith_imm_st;
 			when readmem_st 	=> nstate <= ldreg_st;
 			when rtype_ex_st 	=> nstate <= writereg_st;
 			when others 		=> nstate <= fetch_st;

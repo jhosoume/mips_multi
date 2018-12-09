@@ -11,6 +11,7 @@ vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/reg.vh
 vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/regbuf.vhd}
 vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_multi.vhd}
 vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/store_byte_selector.vhd}
+vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/load_byte_selector.vhd}
 vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mux_2.vhd}
 vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/breg.vhd}
 vcom -93 -work work {/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/extsgn.vhd}
