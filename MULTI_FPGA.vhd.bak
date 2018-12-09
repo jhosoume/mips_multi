@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.mips_pkg.all;
+
+entity MULTI_FPGA is
+	port 
+	(
+		clk		: in std_logic;
+		clk_rom	: in std_logic;
+		rst	   : in std_logic;
+		debug		: in std_logic_vector(1 downto 0);
+		display7seg0 : out std_logic_vector(6 downto 0);
+		display7seg1 : out std_logic_vector(6 downto 0);
+		display7seg2 : out std_logic_vector(6 downto 0);
+		display7seg3 : out std_logic_vector(6 downto 0);
+		display7seg4 : out std_logic_vector(6 downto 0);
+		display7seg5 : out std_logic_vector(6 downto 0);
+		display7seg6 : out std_logic_vector(6 downto 0);
+		display7seg7 : out std_logic_vector(6 downto 0)
+	);
+
+end entity;

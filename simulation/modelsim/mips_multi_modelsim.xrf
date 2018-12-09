@@ -8,6 +8,7 @@ source_file = 1, mem_byenabled.qip
 source_file = 1, /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/store_byte_selector.vhd
 source_file = 1, /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/load_byte_selector.vhd
 source_file = 1, /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/sete_segs_4bits.vhd
+source_file = 1, /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/MULTI_FPGA.vhd
 source_file = 1, /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/db/mips_multi.cbx.xml
 source_file = 1, /home/jhosoume/install/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, /home/jhosoume/install/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
