@@ -317,6 +317,12 @@ component store_byte_selector is
 		byteena		: out std_logic_vector(3 downto 0));
 end component;
 
+component sete_segs_4bits is
+	port (
+		binary	: in std_logic_vector(3 downto 0);
+		segs		: out std_logic_vector(0 to 6));
+end component;
+
 	
 	
 --	procedure mux2x1 (signal x0, x1	: in std_logic_vector(WORD_SIZE-1 downto 0); 

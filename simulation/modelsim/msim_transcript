@@ -1227,3 +1227,5 @@ run -all
 #    Time: 2082 ps  Iteration: 6  Instance: /mips_multi_tb/i1/mips_load
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 2082 ps  Iteration: 6  Instance: /mips_multi_tb/i1/mips_load
+write format memory mem.do
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/simulation/modelsim/wave_test_storeload.do
