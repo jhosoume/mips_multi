@@ -3,6 +3,6 @@
 	<PROJECT NAME="mips_multi">
 		<CBX_INST_ENTRY INSTANCE_NAME="|mips_multi|breg:bcoreg|altsyncram:breg32_rtl_0" CBX_FILE_NAME="altsyncram_bnd1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|mips_multi|breg:bcoreg|altsyncram:breg32_rtl_1" CBX_FILE_NAME="altsyncram_bnd1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|mips_multi|byteenabled_mem:mem|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_j4g1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mips_multi|byteenabled_mem:mem|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_92g1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
