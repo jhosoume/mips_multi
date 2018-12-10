@@ -1227,3 +1227,11 @@ run -all
 #    Time: 2082 ps  Iteration: 6  Instance: /mips_multi_tb/i1/mips_load
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 2082 ps  Iteration: 6  Instance: /mips_multi_tb/i1/mips_load
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10500 ps  Iteration: 3  Instance: /mips_multi_tb/i1/mips_load
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10500 ps  Iteration: 3  Instance: /mips_multi_tb/i1/mips_load
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10500 ps  Iteration: 3  Instance: /mips_multi_tb/i1/mips_load
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10500 ps  Iteration: 3  Instance: /mips_multi_tb/i1/mips_load

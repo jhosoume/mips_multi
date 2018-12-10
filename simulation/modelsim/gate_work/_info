@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 d/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/simulation/modelsim
 Emips_multi
-Z1 w1544071998
+Z1 w1544406811
 Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
 Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 UNhinel8zMjXEk9?9^Dm^2
 Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
@@ -19,7 +19,7 @@ L34
 VmaM1aaJALaU`RZ;m<QQ9>2
 Z11 OV;C;10.1d;51
 31
-Z12 !s108 1544072085.457255
+Z12 !s108 1544406939.161283
 Z13 !s90 -reportprogress|300|-93|-work|work|mips_multi.vho|
 Z14 !s107 mips_multi.vho|
 Z15 o-93 -work work -O0
@@ -34,9 +34,9 @@ R5
 R6
 R7
 DEx4 work 10 mips_multi 0 22 maM1aaJALaU`RZ;m<QQ9>2
-l1408
+l1512
 L84
-Vc_zNS7FZ=_YQOZ5a<`Q5P2
+V0P]_BZmC5<Dh2SW5?obWI0
 R11
 31
 R12
@@ -44,10 +44,10 @@ R13
 R14
 R15
 R16
-!s100 SE7JZfn0S^M88@FNWWD5C2
+!s100 jG?o3G@c0JEPJzSicf7_j0
 !i10b 1
 Emips_multi_tb
-Z17 w1544046769
+Z17 w1544401125
 R5
 R6
 R8
@@ -60,7 +60,7 @@ Vh<D<TKJ[Y=5kZ32Wk;baL3
 R11
 31
 !i10b 1
-Z20 !s108 1544072085.866506
+Z20 !s108 1544406939.565899
 Z21 !s90 -reportprogress|300|-93|-work|work|/home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_multi_tb.vhd|
 Z22 !s107 /home/jhosoume/unb/oac/multiciclo_projeto/mips_multi/mips_multi_tb.vhd|
 R15
@@ -71,8 +71,8 @@ R6
 DEx4 work 13 mips_multi_tb 0 22 h<D<TKJ[Y=5kZ32Wk;baL3
 l52
 L33
-VKJ;Q3aOZEI??6i6n1M6FT1
-!s100 3B??Jm1k`3mVa8IiE;Q@83
+Vo[ibk[jJR]D>Abe]m@<=J0
+!s100 ^[RfY[G@F?8?VM8]ANfL80
 R11
 31
 !i10b 1

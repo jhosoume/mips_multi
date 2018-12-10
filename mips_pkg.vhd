@@ -288,7 +288,7 @@ component byteenabled_mem is
 	port
 	(
 		address	: IN STD_LOGIC_VECTOR (WADDR-1 DOWNTO 0);
-		byteena	: IN STD_LOGIC_VECTOR (3 DOWNTO 0) :=  (OTHERS => '1');
+		byteena	: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
 		clk		: IN STD_LOGIC;
 		data		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 		wren		: IN STD_LOGIC ;

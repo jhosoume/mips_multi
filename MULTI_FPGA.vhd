@@ -44,43 +44,43 @@ begin
 	DISP1: sete_segs_4bits
 		PORT MAP(
 			binary => output(7 downto 4),
-			segs => display7seg0
+			segs => display7seg1
 		);
 	
 	DISP2: sete_segs_4bits
 		PORT MAP(
 			binary => output(11 downto 8),
-			segs => display7seg0
+			segs => display7seg2
 		);
 		
 	DISP3: sete_segs_4bits
 		PORT MAP(
 			binary => output(15 downto 12),
-			segs => display7seg0
+			segs => display7seg3
 		);
 		
 	DISP4: sete_segs_4bits
 		PORT MAP(
 			binary => output(19 downto 16),
-			segs => display7seg0
+			segs => display7seg4
 		);
 		
 	DISP5: sete_segs_4bits
 		PORT MAP(
 			binary => output(23 downto 20),
-			segs => display7seg0
+			segs => display7seg5
 		);
 
 	DISP6: sete_segs_4bits
 		PORT MAP(
 			binary => output(27 downto 24),
-			segs => display7seg0
+			segs => display7seg6
 		);
 
 	DISP7: sete_segs_4bits
 		PORT MAP(
 			binary => output(31 downto 28),
-			segs => display7seg0
+			segs => display7seg7
 		);
 
 end Behavioral;
